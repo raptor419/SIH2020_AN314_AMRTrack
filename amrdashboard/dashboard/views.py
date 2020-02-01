@@ -214,7 +214,7 @@ def active(request):
             input_form.fields['col'].choices = [(x, x) for x in COLLTYPES]
             input_form.fields['org'].choices = [(x, x) for x in ORGANISMS]
 
-    return render(request, 'dashboard/active.html',
+    return render(request, 'dashboard/active1.html',
                   {'form': input_form, 'registered': created, 'table': table, 'json': json})
 
 
@@ -466,7 +466,7 @@ def ml_analysis(request):
             print(input_form)
             if input_form.is_valid():
                 if not input_form.cleaned_data['ams2']:
-                    input_form.cleaned_data['ams2'] = ANTIMICROBIALS1
+                    input_form.cleaned_data['ams2'] = ANTIMICROBIALS1[0]
                 ams=input_form.cleaned_data['ams2']
                 print(ams)
                 input_form = input_form2()
