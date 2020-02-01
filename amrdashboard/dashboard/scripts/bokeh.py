@@ -136,12 +136,12 @@ def barchart(dff,dft):
     hsbar = plot(barhs,sm_matrix,
         kind="barh",
         x="organism",
-        xlabel="Sensitivity",
+        xlabel="Resistance",
         title="Drug",
         alpha=0.6,
         legend="bottom_right",
         show_figure=False,
-        figsize=(1200, 700),
+        figsize=(1200, 850),
     )
     print(hsbar)
 
