@@ -460,5 +460,24 @@ def rcount(series):
     return (series.values == 1).sum()
 
 def ml_analysis(request):
-    return HttpResponse('<h1>wiseR access is locked for this user</h1><h2>For more details about wiseR visit <a href="https://github.com/SAFE-ICU/wiseR/">wiseR github</a>')
+    if request.method == 'POST':
+            input_form = input_form2(data=request.POST)
+            input_form.fields['ams2'].choices = [(x, x) for x in ANTIMICROBIALS1]
+            print(input_form)
+            if input_form.is_valid():
+                if not input_form.cleaned_data['ams2']:
+                    input_form.cleaned_data['ams2'] = ANTIMICROBIALS1
+                ams=input_form.cleaned_data['ams2']
+                print(ams)
+                input_form = input_form2()
+                input_form.fields['ams2'].choices = [(x, x) for x in ANTIMICROBIALS1]
+                return render(request, 'dashboard/ml_view.html',{'form': input_form,'pic':ams})
+            else:
+                print(input_form.errors)
+    else:
+        input_form = input_form2()
+        input_form.fields['ams2'].choices = [(x, x) for x in ANTIMICROBIALS1]
+        return render(request, 'dashboard/ml_view.html',{'form': input_form})
+
+    return render(request,'dashboard/viewdata.html')
 

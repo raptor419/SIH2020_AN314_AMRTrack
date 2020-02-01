@@ -24,7 +24,48 @@ ANTIMICROBIALS = ['amikacin',
                   'tetracycline',
                   'ticarcillin_clavulanicacid',
                   'tigecycline', 'vancomycin']
-
+                  
+ANTIMICROBIALS1 =['Penicillin G','Oxacillin'
+, 'Flucloxacillin'
+, 'Amoxicillin'
+, 'Amoxicillin/clavulanic acid'
+, 'Ampicillin'
+, 'Piperacillin/tazobactam'
+, 'Cefazolin'
+, 'Cefepime'
+, 'Cefuroxime'
+, 'Cefoxitin'
+, 'Cefotaxime'
+, 'Ceftazidime'
+, 'Ceftriaxone'
+, 'Gentamicin'
+, 'Tobramycin'
+, 'Amikacin'
+, 'Kanamycin'
+, 'Trimethoprim'
+, 'Trimethoprim/sulfamethoxazole'
+, 'Nitrofurantoin'
+, 'Fosfomycin'
+, 'Linezolid'
+, 'Ciprofloxacin'
+, 'Moxifloxacin'
+, 'Vancomycin'
+, 'Teicoplanin'
+, 'Tetracycline'
+, 'Tigecycline'
+, 'Doxycycline'
+, 'Erythromycin'
+, 'Clindamycin'
+, 'Azithromycin'
+, 'Imipenem'
+, 'Meropenem'
+, 'Metronidazole'
+, 'Chloramphenicol'
+, 'Colistin'
+, 'Mupirocin'
+, 'Rifampicin'
+]
+                  
 ORGANISMS = ['acinetobacter',
              'citrobacter',
              'coagulase negative staphylococcus',

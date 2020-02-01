@@ -25,12 +25,18 @@ class PathTestForm(forms.ModelForm):
         self.helper.form_method = 'post'
         self.helper.add_input(Submit('submit', 'Save person'))
 
+class input_form2(forms.Form):
+    ams2=forms.ChoiceField(widget=forms.RadioSelect, label="Select Antimicrobial", required=False)
+    def __init__(self, *args, **kwargs):
+        super(input_form2,self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.add_input(Submit('submit', 'Generate Plot', css_class='btn btn-success'))
+        self.helper.form_method = 'POST'
 
 class InputDataForm(forms.Form):
     keywords = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Keywords'}), required=False)
     ams = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple, label="Select Antimicrobial", required=False)
-    site = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple, label="Select Collection Location",
-                                     required=False)
+    site = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple, label="Select Collection Location",required=False)
     org = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple, label="Select Organisms", required=False)
     col = forms.MultipleChoiceField(widget=forms.CheckboxSelectMultiple, label="Select Collection Type", required=False)
     startdate = forms.DateField(label='Enter end Date', widget=DatePickerInput, required=False)
