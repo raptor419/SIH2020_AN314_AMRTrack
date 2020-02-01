@@ -319,6 +319,8 @@ def exploraotry_analysis(request):
                 graph = generate_graph(organisms=input_form.cleaned_data['org'], ams=input_form.cleaned_data['ams'], )
                 print(graph)
                 print(settings.FILE_DIR)
+
+                print(settings.FILE_DIR+'/linegraph.tsv')
                 graph.to_csv(settings.FILE_DIR+'/linegraph.tsv', sep='\t')
                 table = graph.to_html()
                 json = graph.to_json(orient='records',date_format='iso')
