@@ -21,9 +21,3 @@ eb-virt
 
 # javascript
 package-lock.json
-
-staticfiles/*
-!staticfiles/.gitkeep 
-
-
-# Elastic Beanstalk Files
