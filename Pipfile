@@ -1,0 +1,23 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+asgiref = "*"
+autopep8 = "*"
+django = "==2.1.1"
+pycodestyle = "*"
+pytz = "*"
+sqlparse = "*"
+unipath = "*"
+dj-database-url = "*"
+python-decouple = "*"
+gunicorn = "*"
+whitenoise = "*"
+django-heroku = "*"
+
+[requires]
+python_version = "3.6"
