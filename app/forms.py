@@ -7,7 +7,7 @@ from bootstrap_datepicker_plus import DatePickerInput
 from app.variables import *
 
 class input_form2(forms.Form):
-    ams2=forms.ChoiceField(widget=forms.RadioSelect, label="Select Antimicrobial", required=False)
+    ams2=forms.ChoiceField(widget=forms.RadioSelect, label="Select Antimicrobial", required=True, choices = [(x, x) for x in ANTIMICROBIALS1])
     def __init__(self, *args, **kwargs):
         super(input_form2,self).__init__(*args, **kwargs)
         self.helper = FormHelper()

@@ -1,6 +1,6 @@
-# [Django Dashboard Adminator](https://appseed.us/admin-dashboards/django-dashboard-adminator)
+# AMRTrack
 
-**Open-Source Admin Dashboard** coded in **[Django Framework](https://www.djangoproject.com/)** on top of **Adminator Dashboard** design (free version) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+**Open-Source Admin Dashboard** coded in [Django Framework](https://www.djangoproject.com/) on top of Adminator Dashboard design.
 
 <br />
 
@@ -9,15 +9,15 @@
 - UI-Ready app, SQLite Database, Django Native ORM
 - Modular design, clean code-base
 - Session-Based Authentication, Forms validation
-- Deployment scripts: Heroku, Docker, Gunicorn / Nginx
-- UI Kit: **[Adminator Dashboard](https://colorlib.com/polygon/adminator/index.html?ref=appseed)** (Free version) provided by **ColorLib**
+- Deployment scripts: AWS Elastic Beanstalk, Heroku, Docker, Gunicorn / Nginx
+- UI Kit: Adminator Dashboard
 - **MIT License**
-- Support: Free support via **Github** and (Paid) **24/7 LIVE Support** via [Discord](https://discord.gg/fZC6hup)
 
 <br />
 
 ## Deployment Scripts
 
+- **AWS** - View Online Documentation
 - **Heroku** - Cloud Application Platform
 - **Docker** - execute the app using a sandboxed container
 - **Gunicorn** / Nginx - a common used configuration for Django Apps
@@ -25,39 +25,17 @@
 
 <br />
 
-## Dashboard Links
-
-- [Django Dashboard Adminator](https://appseed.us/admin-dashboards/django-dashboard-adminator) - Product page 
-- [Django Dashboard Adminator](https://django-dashboard-adminator.appseed.us/login/) - LIVE Demo
-- [Django Dashboard Adminator](https://docs.appseed.us/admin-dashboards/django-dashboard-adminator/) - Docs
-
-<br />
-
-## Want more? Go PRO!
-
-PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup)) 
-
-| [Premium Django Dashboards](https://appseed.us/bundles/django-admin-dashboards-pro) | [Django Dashboard Black PRO](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [Django Dashboard Dashkit PRO](https://appseed.us/admin-dashboards/django-dashboard-dashkit-pro) |
-| --- | --- | --- |
-| [![Premium Django Dashboards - Provided by AppSeed.](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-material-pro-screen.png)](https://appseed.us/bundles/django-admin-dashboards-pro)  | [![Django Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-black-pro) | [![Django Dashboard Dashkit PRO](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-dashkit-pro-screen.png)](https://appseed.us/admin-dashboards/django-dashboard-dashkit-pro)
-
-<br />
-<br />
-
-![Django Dashboard Adminator - Open-Source Web App.](https://raw.githubusercontent.com/app-generator/static/master/products/django-dashboard-adminator-screen.png)
-
-<br />
 
 ## How to use it
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/django-dashboard-adminator.git
-$ cd django-dashboard-adminator
+$ git clone https://github.com/raptor/SIH2020_AN314_AMRTrack.git
+$ cd SIH2020_AN314_AMRTrack
 $
 $ # Virtualenv modules installation (Unix based systems)
-$ virtualenv --no-site-packages env
-$ source env/bin/activate
+$ virtualenv --no-site-packages eb-virt
+$ source eb-virt/bin/activate
 $
 $ # Virtualenv modules installation (Windows based systems)
 $ # virtualenv --no-site-packages env
@@ -65,7 +43,7 @@ $ # .\env\Scripts\activate
 $ 
 $ # Install modules
 $ # SQLIte version
-$ pip3 install -r requirements.txt
+$ pip install -r requirements.txt
 $
 $ # Create tables
 $ python manage.py makemigrations
@@ -90,8 +68,8 @@ The app is provided with a basic configuration to be executed in [Heroku](https:
 
 ```bash
 $ # Get the code
-$ git clone https://github.com/app-generator/django-dashboard-adminator.git
-$ cd django-dashboard-adminator
+$ git clone https://github.com/raptor/SIH2020_AN314_AMRTrack.git
+$ cd SIH2020_AN314_AMRTrack
 $
 $ # Heroku Login
 $ heroku login
@@ -126,8 +104,8 @@ The application can be easily executed in a docker container. The steps:
 > Get the code
 
 ```bash
-$ git clone https://github.com/app-generator/django-dashboard-adminator.git
-$ cd django-dashboard-adminator
+$ git clone https://github.com/raptor/SIH2020_AN314_AMRTrack.git
+$ cd SIH2020_AN314_AMRTrack
 ```
 
 > Start the app in Docker
@@ -202,7 +180,7 @@ A dashboard is a set of pages that are easy to read and offer information to the
 
 Adminator is a responsive Bootstrap 4 Admin Template. It provides you with a collection of ready to use code snippets and utilities, custom pages, a collection of applications and some useful widgets. Adminator is licensed under The MIT License (MIT) - provided by **ColorLib**.
 
-<br />
+### [AMR R Package](https://www.biorxiv.org/content/10.1101/810622v1)
+AMR package for R aims at closing this gap by providing tools to simplify antimicrobial resistance data cleaning and analysis, while incorporating international guidelines and scientifically reliable reference data.
 
----
-[Django Dashboard Adminator](https://appseed.us/admin-dashboards/django-dashboard-adminator) - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+<br />

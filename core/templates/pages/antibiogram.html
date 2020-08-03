@@ -2,27 +2,39 @@
 {% extends "layouts/default.html" %}
 
 {% block title %} Blank Page {% endblock title %}
+<script src="https://cdn.bokeh.org/bokeh/release/bokeh-1.1.0.min.js"></script>
 
 {% block stylesheets %}
 <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.css"/>
     <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.css"/>
     <link rel="stylesheet" type="text/css" href="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.1.0.min.css"/>
-    <script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-api-1.1.0.min.js"></script>
+
 {% endblock stylesheets %}
 
 {% block content %}
 
+    <div class="bd bgc-white">
+                  <div class="peers fxw-nw@lg+ ai-s">
+                    <div class="peer peer-greed w-70p@lg+ w-100@lg- p-20">
+                      <div class="layers">
+                        <div class="layer w-100 mB-10">
+                          <h3 class="lh-1">Antibiogram Dashboard</h3>
+                        </div>
+                        <div class="layer w-100">
+                          {{ table|safe }}
+                            {{ script|safe }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
     <!-- (Almost) A blank page -->
-    <h3>
-    Antibiogram Dashboard
-    </h3>
-    <h2>{{ msg }}</h2>
-    {{ table | safe }}
+
+
+    <script src="https://cdn.bokeh.org/bokeh/release/bokeh-2.1.1.min.js"></script>
 
 {% endblock content %}
 
-<script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-1.1.0.min.js"></script>
-<script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-1.1.0.min.js"></script>
-<script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-tables-1.1.0.min.js"></script>
-<script type="text/javascript" src="http://cdn.pydata.org/bokeh/release/bokeh-api-1.1.0.min.js"></script>
-{{ script | safe }}
+
+

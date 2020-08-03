@@ -142,7 +142,7 @@ def plot(
     return_html=False,
     panning=True,
     zooming=True,
-    sizing_mode="fixed",
+    sizing_mode="scale_both",
     toolbar_location="right",
     hovertool=True,
     hovertool_string=None,

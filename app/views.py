@@ -9,6 +9,7 @@ from app.forms import *
 from app.scripts.viewmethods import *
 from app.scripts.bokeh import *
 from app.variables import *
+from authentication.models import *
 
 from bokeh.embed import components
 import pandas as pd
@@ -16,7 +17,8 @@ import pandas as pd
 
 @login_required(login_url="/login/")
 def index(request):
-    return render(request, "index.html")
+    count = User.objects.count()
+    return render(request, "index.html", {'count': count})
 
 
 @login_required(login_url="/login/")
@@ -89,3 +91,25 @@ def antibiogram(request):
         input_form = InputDataForm()
 
     return render(request, "pages/antibiogramform.html", {"form": input_form, "table":table, "msg" : msg, "success" : success})
+
+def ml_analysis(request):
+    pic = None
+    if request.method == 'POST':
+            input_form = input_form2(data=request.POST)
+            input_form.fields['ams2'].choices = [(x, x) for x in ANTIMICROBIALS1]
+            print(input_form)
+            if input_form.is_valid():
+                if not input_form.cleaned_data['ams2']:
+                    input_form.cleaned_data['ams2'] = ANTIMICROBIALS1[0]
+                ams=input_form.cleaned_data['ams2']
+                print(ams)
+                input_form = input_form2()
+                input_form.fields['ams2'].choices = [(x, x) for x in ANTIMICROBIALS1]
+                return render(request, 'pages/ml_view.html',{'form': input_form,'pic':ams})
+            else:
+                print(input_form.errors)
+    else:
+        input_form = input_form2()
+
+
+    return render(request, 'pages/ml_view.html',{'form': input_form})

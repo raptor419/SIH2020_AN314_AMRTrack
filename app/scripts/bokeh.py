@@ -87,8 +87,7 @@ def heatmap(data_matrix, sample_matrix, ls_color_palette=Reds9, r_low=-5, r_high
         #active_drag = "wheel_zoom",  # have to be set hardcoded
         tooltips=lt_tooltip,
         title=s_z,
-        plot_width=1200,
-        plot_height=600,
+        sizing_mode="stretch_both"
     )
     p.rect(
         source=result,
