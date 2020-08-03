@@ -11,9 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9af809e1-b3d5-4d82-9af9-c26d013aa8ce" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/migrations/0003_auto_20200803_1118.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ebextensions/db-migrate.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/db-migrate.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1596366519076</updated>
-      <workItem from="1596366522561" duration="45268000" />
+      <workItem from="1596366522561" duration="45478000" />
     </task>
     <servers />
   </component>
