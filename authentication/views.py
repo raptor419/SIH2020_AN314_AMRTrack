@@ -1,8 +1,5 @@
 # -*- encoding: utf-8 -*-
-"""
-License: MIT
-Copyright (c) 2019 - present AppSeed.us
-"""
+
 
 from django.shortcuts import render
 
@@ -12,7 +9,8 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.forms.utils import ErrorList
 from django.http import HttpResponse
-from .forms import LoginForm, SignUpForm
+from .forms import LoginForm, SignUpForm, ProfileForm
+from app.variables import *
 
 def login_view(request):
     form = LoginForm(request.POST or None)
@@ -42,20 +40,28 @@ def register_user(request):
 
     if request.method == "POST":
         form = SignUpForm(request.POST)
-        if form.is_valid():
+
+        if form.is_valid() :
             form.save()
             username = form.cleaned_data.get("username")
             raw_password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=raw_password)
-
-            msg     = 'User created.'
-            success = True
-            
+            profile_form = ProfileForm(request.POST, instance=user.profile)
+            if profile_form.is_valid():
+                profile_form.save()
+                msg     = 'User created.'
+                success = True
+            else:
+                msg = 'User created but no institute associated'
+                success = True
             #return redirect("/login/")
 
         else:
-            msg = 'Form is not valid'    
+            msg = 'Form is not valid'
+
     else:
         form = SignUpForm()
+        profile_form = ProfileForm()
 
-    return render(request, "accounts/register.html", {"form": form, "msg" : msg, "success" : success })
+
+    return render(request, "accounts/register.html", {"form": form, "profile_form": profile_form,"msg" : msg, "success" : success })

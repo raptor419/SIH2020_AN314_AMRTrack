@@ -1,9 +1,10 @@
 # -*- encoding: utf-8 -*-
-"""
-License: MIT
-Copyright (c) 2019 - present AppSeed.us
-"""
 
+
+# from authentication.models import Profile
 from django.contrib import admin
+
+# Register your models here.
+# admin.site.register(Profile)
 
 # Register your models here.
