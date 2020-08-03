@@ -28,8 +28,18 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authentication',
-    'app'  # Enable the inner app 
+    'app',  # Enable the inner app
+    'bootstrapform',
+    'crispy_forms',
+    'bootstrap_datepicker_plus',
+    'bootstrap3'
 ]
+
+BOOTSTRAP3 = {
+    'include_jquery': True,
+}
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

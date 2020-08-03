@@ -14,6 +14,8 @@ class PathTest(models.Model):
     month = models.IntegerField()
     sampletype = models.CharField(max_length=50)
     organism = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    district = models.CharField(max_length=50)
     hospital = models.CharField(max_length=50)
     collsite = models.CharField(max_length=50)
     # AM Fields, add all
@@ -54,13 +56,13 @@ class PathTest(models.Model):
 class Patient(models.Model):
     patientid = models.CharField(max_length=25)
     testid = models.CharField(max_length=25)
-    state = models.CharField(max_length=50)
-    district = models.CharField(max_length=50)
-    hospital = models.CharField(max_length=50)
-    symptoms = models.CharField(max_length=50)
-    diagnosis = models.CharField(max_length=50)
-    test = models.CharField(max_length=50)
-    prescription = models.CharField(max_length=50)
+    state = models.CharField(max_length=50,default="")
+    district = models.CharField(max_length=50,default="")
+    hospital = models.CharField(max_length=50,default="")
+    symptoms = models.CharField(max_length=50,default="")
+    diagnosis = models.CharField(max_length=50,default="")
+    test = models.CharField(max_length=50,default="")
+    prescription = models.CharField(max_length=50,default="")
     allergy = models.IntegerField(default=0)
 
 

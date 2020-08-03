@@ -1,0 +1,83 @@
+
+{% extends "layouts/default.html" %}
+<style>
+
+    div.scroll1 {
+        overflow: scroll;
+        height: 35em;
+}
+    div.scroll2 {
+        overflow: scroll;
+        height: 20em;
+}
+    div.scroll3 {
+        overflow: scroll;
+        height: 15em;
+}
+</style>
+{% load bootstrap3 %}       {# imports bootstrap3 #}
+{% bootstrap_css %}         {# Embeds Bootstrap CSS #}
+
+
+{% load crispy_forms_tags %}
+
+{% block title %} Antibiogram {% endblock title %}
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+
+    <h3>
+    Hospital Antibiogram
+    </h3>
+
+    <form action="." method="post">
+    <div class='container'>
+        <br>
+         {% csrf_token %}
+        {% bootstrap_javascript jquery='full' %}  {# Embeds Bootstrap JS #} {# Embed Bootstrap JS+jQuery #}
+        <div class="row">
+            <div class="col-md-4 scroll1">
+                {{ form.ams|as_crispy_field }}
+            </div>
+            <div class="col-md-4">
+                <div class="scroll2">
+                    {{ form.org|as_crispy_field }}</div>
+                <div class="scroll3">
+                    {{ form.col|as_crispy_field }}</div>
+            </div>
+            <div class="col-md-4 scroll1">
+                <div class="scroll2">
+                    {{ form.hosp|as_crispy_field }}</div>
+                <div class="scroll3">
+                    {{ form.site|as_crispy_field }}</div>
+
+            <b>
+                {% block extrahead %}
+                    {{ form.media }}
+            <div class="row">
+                Enter Start Date
+                {{ form.startdate }}
+            </div>
+                </br>
+            <div class="row">
+                Enter End Date
+                {{ form.enddate }}
+            </div>
+
+
+            </b>
+
+
+            </div>
+            {% endblock extrahead%}          {# Extra Resources End #}
+            <div>
+                        <button type="submit" class="btn btn-success">Generate Sensitivity Table</button>
+                    </div>
+        </div>
+            <br>
+
+    </div>
+    </form>
+    {% endblock content %}
